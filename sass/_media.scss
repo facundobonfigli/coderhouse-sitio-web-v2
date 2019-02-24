@@ -1,0 +1,86 @@
+
+  @media screen and (min-width: 1025px) { 
+    
+    // SITE STRUCTURE
+    
+    body {
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        grid-template-areas: "header header"
+                             "main aside"
+                             "media media"
+                             "store store"
+                             "footer footer";
+        background: rgba(40,28,30,1);
+        background: -moz-linear-gradient(top, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(40,28,30,1)), color-stop(100%, rgba(82,82,82,1)));
+        background: -webkit-linear-gradient(top, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+        background: -o-linear-gradient(top, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+        background: -ms-linear-gradient(top, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+        background: linear-gradient(to bottom, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#281c1e', endColorstr='#525252', GradientType=0 );
+    }
+    
+    .header {
+        grid-area: header;
+        height: 1000px;
+    }
+
+    header nav ul li a, header nav ul li a i  {
+        font-size: 1.3rem;
+    }
+    
+    .main {
+        grid-area: main;
+    }
+
+    .shows {
+        position: relative;
+        left: 40%;
+        top: 100px;
+    }
+    
+    .aside {
+        grid-area: aside;
+        margin: 20px;
+    }
+
+    .h2-heading {
+        margin:10px;
+    }
+
+    .spotify {
+        position: relative;
+        left: 40%;
+    }
+    
+    .media {
+        grid-area: media;
+    }
+    
+    .media-title {
+        margin:10px;
+    }
+
+    .img-gallery {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .store {
+        grid-area: store;
+    }
+    
+    .footer {
+        background: #333;
+        grid-area: footer;
+    }
+
+    .flex-footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  }

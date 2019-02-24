@@ -1,0 +1,323 @@
+@import 'variables';
+@import 'reset';
+@import 'container';
+
+html {
+    scroll-behavior: smooth;
+}
+
+// SITE STRUCTURE
+body {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "header"
+                         "main"
+                         "aside"
+                         "media"
+                         "store"
+                         "footer";
+    background: rgba(40,28,30,1);
+    background: -moz-linear-gradient(top, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(40,28,30,1)), color-stop(100%, rgba(82,82,82,1)));
+    background: -webkit-linear-gradient(top, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+    background: -o-linear-gradient(top, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+    background: -ms-linear-gradient(top, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+    background: linear-gradient(to bottom, rgba(40,28,30,1) 0%, rgba(82,82,82,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#281c1e', endColorstr='#525252', GradientType=0 );
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.media {
+    grid-area: media;
+}
+
+.store {
+    grid-area: store;
+}
+
+.footer {
+    background: #333;
+    grid-area: footer;
+}
+
+
+// HEADER GENERAL
+
+.header {
+    background: url('../imagenes/background-header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%
+
+}
+
+.flex-header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+// HEADER ELEMENTS
+
+.h1 {
+    font-size: $h1FontSize;
+}
+
+.logo {
+    width: 60%;
+    
+}
+
+header nav {
+    margin-top: 0;
+}
+
+header nav ul {
+    background: rgba(255,255,255,0.3);
+    margin: 10px auto auto auto;
+    border-radius:35px;
+}
+
+header nav ul li {
+    display: inline-block;
+    text-align: center;
+    margin: 0.5rem;
+    transition: all 0.3s;
+}
+
+header nav ul li:hover{
+    transform: scale(1.1);
+}
+
+header nav ul li a {
+    font-size: $menuItemFontSize;
+    color: $menuItemColor;
+    font-family: $secondaryFont;
+    font-weight: $menuItemFontWeigth;
+}
+
+header nav ul li a i {
+    font-size: 12px;
+    margin: 3px;
+}
+
+// MAIN GENERAL
+
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+// MAIN ELEMENTS
+
+main h2 {
+    margin: 20px 10px 5px 10px;
+    font-size: $h2FontSize;
+    color: $h2Color;
+    font-family: $primaryFont; 
+}
+
+main ol {
+     margin: 10px;
+}
+
+main ol li {
+    margin: 10px;
+    color:$pColor;
+    font-size: $pFontSize;
+}
+
+.shows-calendar {
+    margin: 0 10px 0 0;
+}
+
+.fechas {
+    margin: 0 10px 0 0;
+}
+
+.shows-tickets {
+    margin: 0 3px 0 10px;
+}
+
+// ASIDE GENERAL
+
+.aside{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+// MEDIA GENERAL
+
+.flex-media {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.image {
+    margin: 5px;
+    transition: all 2s;
+}
+   
+.image:hover {
+    transform: scale (1.1);
+}
+
+// MEDIA ELEMENTS
+
+.media-title {
+    font-size: $h2FontSize;
+    font-family: $primaryFont;
+    color: $h2Color;
+}
+
+// STORE GENERAL
+
+.store {
+    background: #FFF;
+}
+
+.flex-store {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+// STORE ELEMENTS
+
+.store-title {
+    font-size: $h2FontSize;
+    font-family: $primaryFont;
+    color: $storeColor;
+}
+
+.store-products {
+    text-align: center;
+    vertical-align: center;
+}
+
+.store-title {
+    margin: 30px 0 0 20px;
+    padding: 0 0 10px 0;
+    display: inline-block;
+}
+
+.products {
+    width:200px;
+    margin: 10px 20px 30px 20px;
+    display:inline-block;
+    text-align:center;
+    transition: all 0.3s;
+}
+
+.products:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3)
+}
+
+.prod-title{
+    font-weight: 500;
+    font-size: 14px;
+    margin: 5px;
+    text-align:center;
+}
+
+.prod-price {
+    font-weight: 400;
+    margin: 7px;
+    text-align: center;
+}
+
+.prod-button {
+    text-align: center;
+    height: 25px;
+    width: 100px;
+    background: red;
+    border-radius: 20px;
+    padding: 3px;
+    margin:auto;
+    transition: all 0.1s;
+}
+
+.prod-button:hover {
+    transform: scale(1.1);
+    background: rgb(173, 0, 0);
+} 
+
+.prod-img {
+    width: 100%;
+    height: 100%;
+}
+
+// FOOTER GENERAL
+
+.flex-footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer{
+    background: rgba(40,28,30,1);
+}
+
+// FOOTER ELEMENTS
+
+.logo-footer{
+    width: 80%;
+    margin: 10px 30px;
+}
+
+.nav-social{
+    margin-left: 40px;
+}
+
+.social-icons{
+    margin: 3px;
+    color:#FFF;
+}
+
+.social-network {
+    color: #FFF;
+    font-size: 12px;
+    flex-flow: row nowrap;
+}
+
+.copyright {
+    text-align: center;
+    font-size: $copyrightFontSize;
+    color: $copyrightColor;
+    padding:7px;
+}
+
+.bot-copyright{
+    color: $black;
+} 
+
+@import 'media';
